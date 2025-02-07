@@ -1,0 +1,38 @@
+batch_size: 128 # batch size
+epochs: 1000 # total number of epochs
+eval_every_n_epochs: 1 # validation frequency
+fine_tune_from: None
+log_every_n_steps: 5 # print training log frequency
+init_lr: 0.00005 # initial learning rate for Adam
+init_base_lr: 0.0001  # initial learning rate for the base cellFormer 
+weight_decay: 1e-6 # weight decay for Adam
+gpu: cuda:0 # training GPU
+task_name: CV5_drop_gat_comb
+
+
+model:
+  vocab_size: 9916
+  d_model: 256
+  seq_length: 2048
+  init_node_f: 1
+  num_heads_gat: 3
+  node_f: 8
+  num_heads: 8
+  d_ff: 1024  
+  feat_dim: 256
+  pred_additional_feat_dim: 6
+  pred_n_layer: 2
+  out_dim: 1
+
+
+dataset:
+  num_workers: 1 # dataloader number of workers
+  valid_size: 0.1 # ratio of validation data
+  test_size: 0.2
+  Expr_file: pos_neg_LINCS_cancer.csv
+  net_file: 9606_gene_links_greater_800_CO.csv
+  f_path: pos_neg_LINCS_cell_dt_cancer
+  path_feat: True
+  i: 4
+  
+
