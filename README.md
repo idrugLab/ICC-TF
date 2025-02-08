@@ -1,5 +1,5 @@
 # ICC-TF
-Transformer-based deep learning model for immune checkpoint blockade comination therapy
+Transformer-based deep learning model for immune checkpoint blockade combination therapy
 
 
 # Installation
